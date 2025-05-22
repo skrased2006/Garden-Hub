@@ -4,19 +4,19 @@ const ActiveGardeners = () => {
   const [gardeners, setGardeners] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/users')
+    fetch('https://garden-hub-server-skrased2006-skrased2006s-projects.vercel.app/active-users')
       .then(res => res.json())
       .then(data => {
-        const active = data.filter(g => g.status === 'active');
-        setGardeners(active);
+       setGardeners(data);
+        
       });
   }, []);
 
   return (
-    <div className="p-6">
+    <div className="my-10">
       <h2 className="text-3xl font-bold text-center mb-8 text-green-700">🌿 Featured Gardeners</h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-11/12 mx-auto">
         {gardeners.map((gardener, index) => (
           <div key={index} className="bg-white border border-gray-200 rounded-xl shadow-lg p-5 hover:shadow-xl transition">
             <img

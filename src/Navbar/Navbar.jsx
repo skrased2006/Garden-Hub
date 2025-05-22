@@ -50,7 +50,7 @@ const Navbar = () => {
 
         {/* Main Menu */}
         <div
-          className={`flex flex-col md:flex-row items-start md:items-center justify-between md:gap-6 gap-4 md:static absolute left-0 w-full md:w-auto bg-white md:bg-transparent px-6 md:px-0 transition-all duration-300 ${
+          className={`flex flex-col md:flex-row items-start md:items-center justify-between md:gap-6 gap-4 md:static absolute left-0 w-full md:w-auto bg-white md:bg-transparent px-6   md:px-0 transition-all duration-300 ${
             menuOpen ? 'top-[80px]' : '-top-[500px]'
           }`}
         >

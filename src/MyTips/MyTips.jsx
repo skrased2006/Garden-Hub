@@ -10,7 +10,7 @@ const MyTips = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:3000/tips/user/${user.email}`)
+      fetch(`https://garden-hub-server-nqgqlnv42-skrased2006s-projects.vercel.app/tips/user/${user.email}`)
         .then(res => res.json())
         .then(data => {
           setMyTips(data);

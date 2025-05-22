@@ -2,3 +2,22 @@
 @plugin "daisyui"{
   themes:light --default
 }
+
+@keyframes like-bounce {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.like-bounce {
+  animation: like-bounce 0.6s ease forwards;
+}

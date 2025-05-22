@@ -16,7 +16,8 @@ const MySingleTip = ({ mySingleTip, onDelete }) => {
     name,
     email,
     difficulty,
-    availability
+    availability,
+    likes
   } = mySingleTip;
 
   const handleDelete = (id) => {
@@ -30,7 +31,7 @@ const MySingleTip = ({ mySingleTip, onDelete }) => {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/tips/${id}`, {
+        fetch(`https://garden-hub-server-nqgqlnv42-skrased2006s-projects.vercel.app/tips/${id}`, {
           method: 'DELETE',
         })
         .then(res => res.json())
@@ -63,11 +64,13 @@ const MySingleTip = ({ mySingleTip, onDelete }) => {
       <p className="text-sm text-gray-600"><strong>Difficulty:</strong> {difficulty}</p>
       <p className="text-sm text-gray-600"><strong>Availability:</strong> {availability}</p>
       <p className="text-gray-700 mt-2"><strong>Description:</strong> {description}</p>
-
+      <h2 className=' text-xl font-bold'>Total Likes:<span className='text-yellow-500'> {likes}</span></h2>
       <div className="text-xs text-gray-500 italic mt-4 flex justify-between">
         <div>
           <p>Submitted by: {name || "Anonymous"}</p>
           <p>{email}</p>
+
+       
         </div>
         <div className="flex items-center space-x-4">
           <Link to={`/shirtDeatials/`}>
