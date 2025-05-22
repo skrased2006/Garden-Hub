@@ -11,7 +11,6 @@ import ErrorPage from "./ErrorPage/ErrorPage";
 import BrowseTips from "./BrowseTips/BrowseTips";
 import PrivetRoute from "./PrivetRoute/PrivetRoute";
 import UpdateMysingleTip from "./MyTips/UpdateMysingleTip";
-import GardenBenefitsDetailed from "./GardenBenifit/GardenBenefitsDetailed";
 
 export const router = createBrowserRouter([
     {
@@ -47,7 +46,7 @@ export const router = createBrowserRouter([
         },
         {
           path: '/tipDeatialsPage/:id',
-          loader: () => fetch('http://localhost:3000/tips'),
+          loader: () => fetch('https://garden-hub-server-teal.vercel.app/tips'),
           element: 
           <PrivetRoute>
           <TipDeatailsPage />

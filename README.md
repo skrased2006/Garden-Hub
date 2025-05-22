@@ -1,12 +1,40 @@
-# React + Vite
+# 🌿 Garden Hub - Gardening Community & Resource Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Site URL:** [https://garden-hub-client.web.app](https://garden-hub-client.web.app)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔍 Project Description
 
-## Expanding the ESLint configuration
+Garden Hub is an interactive community and resource platform for gardening enthusiasts. Whether you're growing vegetables, planting flowers, or maintaining houseplants, this platform provides tips, tutorials, and a space to share knowledge. It connects users and promotes sustainable gardening habits.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Key Features
+
+- 🔐 **User Authentication** using Firebase (Google Sign-In)
+- 🧑‍🌾 **User Profiles & Active Gardener Display**
+- 📚 **Gardening Tips Collection**, Filter by User Email
+- ❤️ **Like System** to promote useful content
+- ✏️ **Create, Edit, Delete Tips** with secure access
+- 🌱 **Trending Tips Section** sorted by likes
+- 📊 **MongoDB + Express Backend** with RESTful API
+- 🎨 **Fully Responsive** and styled with TailwindCSS + DaisyUI
+- ⚡ **Protected Routes** for authenticated users
+- 🔄 **Real-time data updates** without reloading
+
+---
+
+## 🛠️ Technologies Used
+
+- React.js (Vite)
+- Firebase Auth
+- MongoDB & Express.js
+- Tailwind CSS & DaisyUI
+- React Router
+- SweetAlert2
+- Lucide Icons
+
+---
+
+Enjoy building a greener world with Garden Hub! 🌿

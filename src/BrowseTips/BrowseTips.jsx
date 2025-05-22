@@ -1,20 +1,29 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router'; // ✅ make sure it's from react-router-dom
+import { useLoaderData } from 'react-router'; 
 import TipCard from '../ExploreGardeners/TipCard';
 import Loading from '../Loading/Loading';
 
 const BrowseTips = () => {
   const gardenData = useLoaderData();
   const [loading, setLoading] = useState(true);
+  const [selectedDifficulty, setSelectedDifficulty] = useState('');
 
-  // Add loading delay effect
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1000); // 1.5 seconds delay
+    }, 1000);
 
-    return () => clearTimeout(timer); // Clean up
+    return () => clearTimeout(timer);
   }, []);
+
+  
+  const filteredTips = selectedDifficulty
+    ? [...gardenData].sort((a, b) => {
+        if (a.difficulty === selectedDifficulty && b.difficulty !== selectedDifficulty) return -1;
+        if (a.difficulty !== selectedDifficulty && b.difficulty === selectedDifficulty) return 1;
+        return 0;
+      })
+    : gardenData;
 
   if (loading) {
     return <Loading />;
@@ -26,9 +35,25 @@ const BrowseTips = () => {
         Explore Garden Tips from Gardeners
       </h2>
 
-      {gardenData?.length > 0 ? (
+      
+      <div className="mb-6 flex justify-center">
+        <select
+  className="border border-gray-300 rounded-md px-4 bg-white text-gray-700 shadow-sm
+             focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500
+             transition duration-200 ease-in-out cursor-pointer"
+  value={selectedDifficulty}
+  onChange={(e) => setSelectedDifficulty(e.target.value)}
+>
+          <option value="">All Difficulties</option>
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+        </select>
+      </div>
+
+      {filteredTips?.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {gardenData.map((singleData) => (
+          {filteredTips.map((singleData) => (
             <TipCard key={singleData._id} singleData={singleData} />
           ))}
         </div>
@@ -40,3 +65,4 @@ const BrowseTips = () => {
 };
 
 export default BrowseTips;
+
