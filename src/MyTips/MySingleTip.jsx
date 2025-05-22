@@ -31,7 +31,7 @@ const MySingleTip = ({ mySingleTip, onDelete }) => {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://garden-hub-server-nqgqlnv42-skrased2006s-projects.vercel.app/tips/${id}`, {
+        fetch(`https://garden-hub-server-teal.vercel.app/tips/${id}`, {
           method: 'DELETE',
         })
         .then(res => res.json())

@@ -1,12 +1,16 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, Navigate, useNavigate } from 'react-router';
 import { AuthContext } from './AuthContext';
 import Swal from 'sweetalert2';
+import { Eye, EyeOff } from 'lucide-react';
 
 const Login = () => {
 
   const navigate=useNavigate();
+
+  const [showPassword,setShowPassword]=useState(false);
+
 
   const {login,googleLogin,user}=useContext(AuthContext);
 
@@ -90,13 +94,25 @@ const Login = () => {
               className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
               required
             />
-            <input
-              name="password"
-              type="password"
-              placeholder="Password"
-              className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
-              required
-            />
+          <div className="relative">
+      <input
+    name="password"
+    type={showPassword ? "text" : "password"}
+    placeholder="Password"
+    className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+    required
+     />
+     <button
+      type="button"
+    onClick={() => setShowPassword(!showPassword)}
+    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600"
+     >
+      {showPassword ? <Eye /> : <EyeOff />}
+  </button>
+</div>
+
+
+
             <button
               type="submit"
               className="w-full py-2 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-300"

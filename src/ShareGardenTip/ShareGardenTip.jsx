@@ -23,7 +23,7 @@ const ShareGardenTip = () => {
 
   const handleTip = e => {
     e.preventDefault();
-    fetch('https://garden-hub-server-skrased2006-skrased2006s-projects.vercel.app/tips', {
+    fetch('http://localhost:3000/tips', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)

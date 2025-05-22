@@ -91,11 +91,13 @@ const Navbar = () => {
                 My Tips
               </NavLink>
             )}
+             
+              
           </div>
 
           {/* User Avatar & Logout */}
           {user ? (
-            <div className="flex gap-3 relative mt-2 md:mt-0">
+            <div className="flex gap-3 relative mt-2 md:mt-0 ">
               <div
   className="tooltip tooltip-bottom"
   data-tip={user?.email || 'No Email'}

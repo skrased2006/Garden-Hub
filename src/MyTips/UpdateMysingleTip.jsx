@@ -26,7 +26,7 @@ const UpdateMysingleTip = () => {
     const updateTip=Object.fromEntries(formData.entries())
     console.log(updateTip);
     
-    fetch(`https://garden-hub-server-skrased2006-skrased2006s-projects.vercel.app/tips/${_id}`,{
+    fetch(`https://garden-hub-server-teal.vercel.app/tips/${_id}`,{
         method:'PUT',
         headers:{
                 

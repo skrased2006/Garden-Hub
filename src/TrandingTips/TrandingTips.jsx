@@ -6,7 +6,7 @@ const TrandingTips = () => {
     const [trandingTips, setTrandingTips] =useState([]);
 
     useEffect(()=>{
-        fetch('https://garden-hub-server-skrased2006-skrased2006s-projects.vercel.app/trandingTips')
+        fetch('https://garden-hub-server-teal.vercel.app/trandingTips')
         .then(res=>res.json())
         .then(data=>{
             console.log(data);

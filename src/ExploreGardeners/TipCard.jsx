@@ -26,7 +26,7 @@ const TipCard = ({ singleData }) => {
 
 
       // (optional) Update like to backend
-      fetch(`https://garden-hub-server-skrased2006-skrased2006s-projects.vercel.app/tips/like/${_id}`, {
+      fetch(`http://localhost:3000/tips/like/${_id}`, {
         method: 'PATCH'
       }).catch(err => console.error('Like update failed', err));
     }

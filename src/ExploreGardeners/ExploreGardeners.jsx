@@ -6,7 +6,7 @@ const ExploreGardeners = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://garden-hub-server-skrased2006-skrased2006s-projects.vercel.app/users')
+    fetch('https://garden-hub-server-teal.vercel.app/users')
       .then(res => res.json())
       .then(data => {
         setGardeners(data);

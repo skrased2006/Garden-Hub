@@ -1,12 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from './AuthContext';
 import Swal from 'sweetalert2';
+import { Eye, EyeOff } from 'lucide-react';
 
 const Register = () => {
   const navigate=useNavigate();
     const{ createUser,user,setUser,googleLogin}=useContext(AuthContext);
+
+    const [showPassword,setShowPassword]=useState(false);
     const handleGoogleLogin = (e) =>{
        e.preventDefault();
        googleLogin()
@@ -103,13 +106,23 @@ const Register = () => {
           required
         />
 
-        <input
-          name="password"
-          type="password"
-          placeholder="Password"
-          className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-400"
-          required
-        />
+<div className="relative">
+      <input
+    name="password"
+    type={showPassword ? "text" : "password"}
+    placeholder="Password"
+    className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+    required
+     />
+     <button
+      type="button"
+    onClick={() => setShowPassword(!showPassword)}
+    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600"
+     >
+      {showPassword ? <Eye /> : <EyeOff />}
+  </button>
+</div>
+
 
         <button
           type="submit"

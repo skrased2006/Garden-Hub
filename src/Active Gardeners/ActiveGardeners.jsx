@@ -4,7 +4,7 @@ const ActiveGardeners = () => {
   const [gardeners, setGardeners] = useState([]);
 
   useEffect(() => {
-    fetch('https://garden-hub-server-skrased2006-skrased2006s-projects.vercel.app/active-users')
+    fetch('https://garden-hub-server-teal.vercel.app/active-users')
       .then(res => res.json())
       .then(data => {
        setGardeners(data);

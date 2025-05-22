@@ -11,6 +11,7 @@ import ErrorPage from "./ErrorPage/ErrorPage";
 import BrowseTips from "./BrowseTips/BrowseTips";
 import PrivetRoute from "./PrivetRoute/PrivetRoute";
 import UpdateMysingleTip from "./MyTips/UpdateMysingleTip";
+import GardenBenefitsDetailed from "./GardenBenifit/GardenBenefitsDetailed";
 
 export const router = createBrowserRouter([
     {
@@ -46,7 +47,7 @@ export const router = createBrowserRouter([
         },
         {
           path: '/tipDeatialsPage/:id',
-          loader: () => fetch('https://garden-hub-server-skrased2006-skrased2006s-projects.vercel.app/tips'),
+          loader: () => fetch('http://localhost:3000/tips'),
           element: 
           <PrivetRoute>
           <TipDeatailsPage />
@@ -56,7 +57,7 @@ export const router = createBrowserRouter([
         },
         {
           path: '/my-tips/:email',
-          loader: ({ params }) => fetch(`https://garden-hub-server-skrased2006-skrased2006s-projects.vercel.app/tips/user/${params.email}`),
+          loader: ({ params }) => fetch(`https://garden-hub-server-teal.vercel.app/tips/user/${params.email}`),
           element: <MyTips />
         },
         {
@@ -68,7 +69,7 @@ export const router = createBrowserRouter([
 //   console.log('Fetched data:', data);
 //   return data;
 // },
-      loader:({params})=>fetch(`https://garden-hub-server-skrased2006-skrased2006s-projects.vercel.app/tips/${params.id}`),
+      loader:({params})=>fetch(`https://garden-hub-server-teal.vercel.app/tips/${params.id}`),
 
           Component: UpdateMysingleTip
         }
@@ -76,9 +77,11 @@ export const router = createBrowserRouter([
         ,
         {
           path:'/browseTips',
-          loader:()=>fetch('https://garden-hub-server-skrased2006-skrased2006s-projects.vercel.app/tips'),
+          loader:()=>fetch('https://garden-hub-server-teal.vercel.app/tips'),
           Component:BrowseTips
-        }
+        },
+        
+
         
         
      ]
