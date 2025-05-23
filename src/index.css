@@ -21,3 +21,12 @@
 .like-bounce {
   animation: like-bounce 0.6s ease forwards;
 }
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+

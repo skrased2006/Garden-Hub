@@ -32,7 +32,10 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-white text-black shadow-md sticky top-0 z-50">
+    
+    <div className="bg-white text-black shadow-md sticky top-0 z-50
+    
+    ">
       <div className="max-w-7xl mx-auto py-3 px-6 w-full">
       
         <div className="flex items-center justify-between md:hidden">
