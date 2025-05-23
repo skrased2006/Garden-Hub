@@ -1,6 +1,6 @@
 # 🌿 Garden Hub - Gardening Community & Resource Platform
 
-**Live Site URL:** [https://garden-hub-client.web.app](https://garden-hub-client.web.app)
+**Live Site URL:** [https://my-garden-website.web.app/]
 
 ---
 
