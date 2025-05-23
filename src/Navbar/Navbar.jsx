@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <div className="bg-white text-black shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto py-3 px-6 w-full">
-        {/* Mobile Top Bar: Logo + Menu Button */}
+      
         <div className="flex items-center justify-between md:hidden">
           <Link to="/">
             <img
@@ -48,13 +48,13 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Main Menu */}
+        
         <div
           className={`flex flex-col md:flex-row items-start md:items-center justify-between md:gap-6 gap-4 md:static absolute left-0 w-full md:w-auto bg-white md:bg-transparent px-6   md:px-0 transition-all duration-300 ${
             menuOpen ? 'top-[80px]' : '-top-[500px]'
           }`}
         >
-          {/* Left Side Logo for Desktop */}
+        
           <div className="hidden md:block">
             <Link to="/">
               <img
@@ -65,7 +65,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Nav Links */}
+       
           <div className="flex flex-col md:flex-row gap-4 md:gap-6">
             <NavLink to="/" className="text-gray-500 hover:text-green-600" onClick={() => setMenuOpen(false)}>
               Home
@@ -95,7 +95,7 @@ const Navbar = () => {
               
           </div>
 
-          {/* User Avatar & Logout */}
+        
           {user ? (
             <div className="flex gap-3 relative mt-2 md:mt-0 ">
               <div

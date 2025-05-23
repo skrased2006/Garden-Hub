@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Navbar from '../Navbar/Navbar';
-import { Outlet } from 'react-router'; // react-router-dom ব্যবহার করো
+import { Outlet } from 'react-router'; 
 import Footer from '../Footer/Footer';
 import Loading from '../Loading/Loading';
 
@@ -13,7 +13,7 @@ const MainLayout = () => {
     useEffect(() => {
       const timer = setTimeout(() => {
         setLoading(false);
-      }, 1000); // 1 সেকেন্ড লোডিং দেখাবে
+      }, 1000); 
 
       return () => clearTimeout(timer);
     }, []);

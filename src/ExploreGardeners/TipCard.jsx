@@ -1,11 +1,11 @@
 import {  ThumbsUp } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link } from 'react-router';
-import { Fade } from 'react-awesome-reveal'; // তুমি চাইলে Zoom, Slide, Bounce ইত্যাদিও ব্যবহার করতে পারো
- // ✅ ঠিক router-dom ব্যবহার করতে হবে
+import { Fade } from 'react-awesome-reveal'; 
+
 
 const TipCard = ({ singleData }) => {
-  const [likes, setLikes] = useState(singleData.likes || 0); // initial likes
+  const [likes, setLikes] = useState(singleData.likes || 0); 
   const [liked, setLiked] = useState(false);
   const [animate, setAnimate] = useState(false);
 
@@ -27,8 +27,8 @@ const TipCard = ({ singleData }) => {
     setTimeout(()=>setAnimate(false),600)
 
 
-      // (optional) Update like to backend
-      fetch(`http://localhost:3000/tips/like/${_id}`, {
+    
+      fetch(`https://garden-hub-server-teal.vercel.app/tips/like/${_id}`, {
         method: 'PATCH'
       }).catch(err => console.error('Like update failed', err));
     }
@@ -38,7 +38,7 @@ const TipCard = ({ singleData }) => {
     <Fade triggerOnce direction="up" cascade>
   <div className="bg-white rounded-xl shadow-md p-4 space-y-2 hover:shadow-lg transition">
     <img
-      src={image || 'https://via.placeholder.com/300x200'}
+      src={image }
       alt={title}
       className="w-full h-48 object-cover rounded-md"
     />
@@ -51,7 +51,7 @@ const TipCard = ({ singleData }) => {
       <Link to={`/tipDeatalsPage/${_id}`} className="text-blue-500 font-bold"> See more</Link>
     </p>
 
-    {/* ❤️ Like Button */}
+   
     <div onClick={handleLike} className="flex items-center gap-2 mt-2 cursor-pointer select-none">
       {liked ? (
         <img

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
-import { Link, Navigate, useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from './AuthContext';
 import Swal from 'sweetalert2';
 import { Eye, EyeOff } from 'lucide-react';
@@ -13,7 +13,7 @@ const Login = () => {
   const [showPassword,setShowPassword]=useState(false);
 
 
-  const {login,googleLogin,user}=useContext(AuthContext);
+  const {login,googleLogin}=useContext(AuthContext);
 
 
   const handleLogin=(e)=>{
@@ -25,7 +25,6 @@ const Login = () => {
    console.log(email,password);
    login(email,password)
    .then((res) => {
-    console.log(res);
     Swal.fire({
       title: 'Welcome Back!',
       text: `Welcome ${res.user?.displayName || 'User'}!`,
@@ -51,7 +50,7 @@ const Login = () => {
     e.preventDefault();
     googleLogin()
     .then((res) => {
-      console.log(res);
+     
       Swal.fire({
         title: 'Google Sign-in Success!',
         text: `Welcome ${res.user?.displayName || 'User'}!`,
