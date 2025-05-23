@@ -6,25 +6,35 @@ import GardenBenefitsDetailed from '../GardenBenifit/GardenBenefitsDetailed';
 import GardenIdeas from '../GardenGuides/GardenIdeas ';
 
 
+import { Fade, Slide, Zoom } from 'react-awesome-reveal';
 
 const Homepage = () => {
     return (
         <div>
-           
-            <BannerSlider></BannerSlider>
-            <ActiveGardeners></ActiveGardeners>
+            <Zoom triggerOnce>
+                <BannerSlider />
+            </Zoom>
 
-            <TrandingTips></TrandingTips>
-            <GardenBenefitsDetailed></GardenBenefitsDetailed>
+            <Slide direction="left" triggerOnce>
+                <ActiveGardeners />
+            </Slide>
 
-            <GardenIdeas></GardenIdeas>
-           
-            
-            
+            <Fade direction="up" triggerOnce>
+                <TrandingTips />
+            </Fade>
+
+            <Slide direction="right" triggerOnce>
+                <GardenBenefitsDetailed />
+            </Slide>
+
+            <Fade direction="up" triggerOnce>
+                <GardenIdeas />
+            </Fade>
         </div>
     );
 };
 
 export default Homepage;
+
 
 

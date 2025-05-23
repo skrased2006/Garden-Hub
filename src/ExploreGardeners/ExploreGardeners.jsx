@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Loading from '../Loading/Loading';
+import { Fade } from 'react-awesome-reveal';
 
 const ExploreGardeners = () => {
   const [gardeners, setGardeners] = useState([]);
@@ -25,8 +26,10 @@ const ExploreGardeners = () => {
   }
 
   return (
-    <div className="max-w-7xl mx-auto p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+       <div className="max-w-7xl mx-auto p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
       {gardeners.map((gardener) => (
+        <Fade triggerOnce direction="up" cascade>
+ 
         <div
           key={gardener._id}
           className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center
@@ -54,8 +57,10 @@ const ExploreGardeners = () => {
             Total Shared Tips: {gardener.totalSharedTips || 0}
           </p>
         </div>
+         </Fade>
       ))}
     </div>
+   
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../Authtication/AuthContext';
+import { Fade } from 'react-awesome-reveal';
 
 const ShareGardenTip = () => {
   const { user } = useContext(AuthContext);
@@ -52,6 +53,7 @@ const ShareGardenTip = () => {
   };
 
   return (
+    <Fade>
     <div className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-md mt-6">
       <h2 className="text-2xl font-semibold mb-4">Submit a Gardening Tip</h2>
       {success && <p className="text-green-600 mb-3">{success}</p>}
@@ -147,6 +149,7 @@ const ShareGardenTip = () => {
         <button type="submit" className="btn btn-success w-full">Submit Tip</button>
       </form>
     </div>
+    </Fade>
   );
 };
 

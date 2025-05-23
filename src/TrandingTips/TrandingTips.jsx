@@ -9,7 +9,6 @@ const TrandingTips = () => {
         fetch('https://garden-hub-server-teal.vercel.app/trandingTips')
         .then(res=>res.json())
         .then(data=>{
-            console.log(data);
             setTrandingTips(data);
         })
     },[])
@@ -22,7 +21,7 @@ const TrandingTips = () => {
 
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10 mx-auto max-w-11/12'>
                 {trandingTips.map(trandingSingleTip=><SingleTradingTip 
-                key={trandingSingleTip.id}
+                key={trandingSingleTip._id}
                 
                 trandingSingleTip={trandingSingleTip}></SingleTradingTip>)}
 

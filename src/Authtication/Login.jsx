@@ -4,6 +4,7 @@ import { Link, Navigate, useNavigate } from 'react-router';
 import { AuthContext } from './AuthContext';
 import Swal from 'sweetalert2';
 import { Eye, EyeOff } from 'lucide-react';
+import { Fade } from 'react-awesome-reveal';
 
 const Login = () => {
 
@@ -82,6 +83,7 @@ const Login = () => {
    
 
     return (
+      <Fade In ={true}>
         <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-100 via-white to-purple-100">
         <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md animate-fade-in-up">
           <h2 className="text-3xl font-bold text-center text-blue-700 mb-6">Login</h2>
@@ -140,6 +142,7 @@ const Login = () => {
           </p>
         </div>
       </div>
+      </Fade>
     );
 };
 

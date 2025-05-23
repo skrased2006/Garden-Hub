@@ -2,6 +2,7 @@ import { Edit, Eye, Trash2 } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router'; 
 import Swal from 'sweetalert2';
+import { Fade } from 'react-awesome-reveal';
 
 const MySingleTip = ({ mySingleTip, onDelete }) => {
   if (!mySingleTip) return <p>Loading...</p>;
@@ -52,6 +53,7 @@ const MySingleTip = ({ mySingleTip, onDelete }) => {
   };
 
   return (
+     <Fade triggerOnce direction="up" cascade>
     <div className="bg-white rounded-xl shadow-md p-4 space-y-3 max-w-md mx-auto">
       <img
         src={image || 'https://via.placeholder.com/300x200'}
@@ -96,6 +98,7 @@ const MySingleTip = ({ mySingleTip, onDelete }) => {
         </div>
       </div>
     </div>
+    </Fade>
   );
 };
 
