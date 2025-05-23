@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router';
 import { AuthContext } from './AuthContext';
 import Swal from 'sweetalert2';
 import { Eye, EyeOff } from 'lucide-react';
-import { Fade } from 'react-awesome-reveal';
+import {  Zoom } from 'react-awesome-reveal';
 
 const Register = () => {
   const navigate=useNavigate();
@@ -87,8 +87,9 @@ const Register = () => {
 
 
     return (
-      <Fade >
+     
         <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-pink-100 via-white to-blue-100">
+           <Zoom >
     <div className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md animate-fade-in-up">
       <h2 className="text-3xl font-bold text-center text-purple-700 mb-6">Create an Account</h2>
 
@@ -165,8 +166,9 @@ const Register = () => {
         </Link>
       </p>
     </div>
+     </Zoom>
   </div>
-  </Fade>
+ 
     );
 };
 

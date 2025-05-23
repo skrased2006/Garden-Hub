@@ -34,7 +34,7 @@ Garden Hub is an interactive community and resource platform for gardening enthu
 - React Router
 - SweetAlert2
 - Lucide Icons
-
+-etc
 ---
 
 Enjoy building a greener world with Garden Hub! 🌿
