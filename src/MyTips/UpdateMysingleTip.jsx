@@ -40,7 +40,7 @@ const UpdateMysingleTip = () => {
         Swal.fire({
             position: "top-end",
             icon: "success",
-            title: "Shirt update sucsessfully",
+            title: "Tip update sucsessfully",
             showConfirmButton: false,
             timer: 1500
           });

@@ -75,7 +75,7 @@ const MySingleTip = ({ mySingleTip, onDelete }) => {
        
         </div>
         <div className="flex items-center space-x-4">
-          <Link to={`/shirtDeatials/`}>
+          <Link to={`/tipDeatialsPage/${_id}`}>
             <button aria-label="View" className="text-blue-600 hover:text-blue-800" title="View">
               <Eye size={20} />
             </button>
