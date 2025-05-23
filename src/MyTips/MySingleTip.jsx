@@ -5,8 +5,7 @@ import Swal from 'sweetalert2';
 import { Fade } from 'react-awesome-reveal';
 
 const MySingleTip = ({ mySingleTip, onDelete }) => {
-  if (!mySingleTip) return <p>Loading...</p>;
-
+ 
   const {
     title,
     topic,
@@ -56,7 +55,7 @@ const MySingleTip = ({ mySingleTip, onDelete }) => {
      <Fade triggerOnce direction="up" cascade>
     <div className="bg-white rounded-xl shadow-md p-4 space-y-3 max-w-md mx-auto">
       <img
-        src={image || 'https://via.placeholder.com/300x200'}
+        src={image}
         alt={title}
         className="w-full h-48 object-cover rounded-md"
       />

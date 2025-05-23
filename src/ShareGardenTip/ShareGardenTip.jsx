@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../Authtication/AuthContext';
 import {  Zoom } from 'react-awesome-reveal';
+import Swal from 'sweetalert2';
 
 const ShareGardenTip = () => {
   const { user } = useContext(AuthContext);
@@ -24,7 +25,7 @@ const ShareGardenTip = () => {
 
   const handleTip = e => {
     e.preventDefault();
-    fetch('http://localhost:3000/tips', {
+    fetch('https://garden-hub-server-teal.vercel.app/tips', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
@@ -56,7 +57,16 @@ const ShareGardenTip = () => {
     <Zoom triggerOnce>
     <div className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-md mt-6">
       <h2 className="text-2xl font-semibold mb-4">Submit a Gardening Tip</h2>
-      {success && <p className="text-green-600 mb-3">{success}</p>}
+      {success && 
+      Swal.fire({
+     position: "top-end",
+      icon: "success",
+     title: "Your tip has been submitted successfully",
+      showConfirmButton: false,
+      timer: 1500
+     })
+      
+      }
 
       <form onSubmit={handleTip} className="space-y-4">
         <input

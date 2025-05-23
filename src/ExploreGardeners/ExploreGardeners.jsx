@@ -36,7 +36,7 @@ const ExploreGardeners = () => {
                      hover:shadow-2xl transition-shadow duration-300 cursor-pointer"
         >
           <img
-            src={gardener.img || 'https://via.placeholder.com/150'}
+            src={gardener.img }
             alt={gardener.name}
             className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-green-400"
           />

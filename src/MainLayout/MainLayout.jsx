@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import Navbar from '../Navbar/Navbar';
 import { Outlet } from 'react-router'; 
@@ -13,7 +11,7 @@ const MainLayout = () => {
     useEffect(() => {
       const timer = setTimeout(() => {
         setLoading(false);
-      }, 1000); 
+      }, 500); 
 
       return () => clearTimeout(timer);
     }, []);

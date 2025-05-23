@@ -102,17 +102,17 @@ const Navbar = () => {
           {user ? (
             <div className="flex gap-3 relative mt-2 md:mt-0 ">
               <div
-  className="tooltip tooltip-bottom"
-  data-tip={user?.email || 'No Email'}
-  onClick={() => setShowLogout(!showLogout)}
->
-  <img
-    src={user?.photoURL && user.photoURL.trim() !== "" ? user.photoURL : "https://img.icons8.com/?size=80&id=108652&format=png"}
+     className="tooltip tooltip-bottom"
+     data-tip={user?.email || 'No Email'}
+    onClick={() => setShowLogout(!showLogout)}
+   >
+     <img
+     src={user?.photoURL && user.photoURL.trim() !== "" ? user.photoURL : "https://img.icons8.com/?size=80&id=108652&format=png"}
 
-    alt="User"
+      alt="User"
     className="w-8 h-8 rounded-full cursor-pointer"
-  />
-</div>
+    />
+   </div>
 
               {showLogout && (
                 <button
