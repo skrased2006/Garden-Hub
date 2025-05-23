@@ -48,7 +48,7 @@ const TipCard = ({ singleData }) => {
 
     <p className="text-gray-700">
       <strong>Description:</strong> {description.slice(0, 50)}...
-      <Link to={`/tipDeatalsPage/${_id}`} className="text-blue-500 font-bold"> See more</Link>
+      <Link to={`/tipDeatialsPage/${_id}`} className="text-blue-500 font-bold"> See more</Link>
     </p>
 
    

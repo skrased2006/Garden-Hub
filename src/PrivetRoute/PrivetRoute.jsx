@@ -1,14 +1,10 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../Authtication/AuthContext';
-import { Navigate } from 'react-router';
+import { Navigate } from 'react-router'; 
 
-const PrivetRoute = ({children}) => {
-    const {user}=useContext(AuthContext);
-    if(user){
-        return children;
-    }
-    return <Navigate to='/login'></Navigate>
-
+const PrivetRoute = ({ children }) => {
+  const { user } = useContext(AuthContext);
+  return user ? children : <Navigate to="/login" replace />;
 };
 
 export default PrivetRoute;
