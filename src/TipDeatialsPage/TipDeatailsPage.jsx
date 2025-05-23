@@ -1,20 +1,20 @@
 import { ArrowBigLeft } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
-import { Link, useLoaderData, useParams } from 'react-router'; // ✅ 'react-router-dom' use করো
+import { Link, useLoaderData, useParams } from 'react-router'; 
 import Loading from '../Loading/Loading';
 
 const TipDeatailsPage = () => {
-  const tipData = useLoaderData(); // All tips from loader
+  const tipData = useLoaderData(); 
   const { id } = useParams();     
   const [loading,setLoading] =useState(true);
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1000); // 1 সেকেন্ড লোডিং দেখাবে
+    }, 1000); 
 
     return () => clearTimeout(timer);
   }, []);
-  // Get the id from URL
+  
 
   const singleTipData = tipData.find(data => data._id === id);
 

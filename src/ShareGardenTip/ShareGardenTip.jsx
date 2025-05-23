@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 
 const ShareGardenTip = () => {
   const { user } = useContext(AuthContext);
-  const [success, setSuccess] = useState('');
+ 
   const [formData, setFormData] = useState({
     title: '',
     topic: '',
@@ -33,7 +33,14 @@ const ShareGardenTip = () => {
       .then(res => res.json())
       .then(data => {
         if (data.insertedId || data.acknowledged) {
-          setSuccess('✅ Tip submitted successfully!');
+          Swal.fire({
+         position: "top-end",
+         icon: "success",
+        title: "Your tip has been submitted successfully",
+        showConfirmButton: false,
+        timer: 1500
+     })
+        
           setFormData({
             title: '',
             topic: '',
@@ -49,7 +56,7 @@ const ShareGardenTip = () => {
       })
       .catch(err => {
         console.error('Submission error:', err);
-        setSuccess('❌ Submission failed!');
+     
       });
   };
 
@@ -57,16 +64,7 @@ const ShareGardenTip = () => {
     <Zoom triggerOnce>
     <div className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-md mt-6">
       <h2 className="text-2xl font-semibold mb-4">Submit a Gardening Tip</h2>
-      {success && 
-      Swal.fire({
-     position: "top-end",
-      icon: "success",
-     title: "Your tip has been submitted successfully",
-      showConfirmButton: false,
-      timer: 1500
-     })
       
-      }
 
       <form onSubmit={handleTip} className="space-y-4">
         <input
