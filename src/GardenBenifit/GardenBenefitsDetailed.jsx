@@ -1,3 +1,5 @@
+import { Typewriter } from "react-simple-typewriter";
+
 const GardenBenefitsDetailed = () => {
     const benefits = [
       {
@@ -34,7 +36,21 @@ const GardenBenefitsDetailed = () => {
   
     return (
       <section className="p-6 bg-green-50 border border-green-200 rounded-2xl shadow-md mt-8 max-w-11/12 mx-auto">
-        <h2 className="text-3xl font-bold mb-6 text-green-800 text-center"> Benefits of Gardening</h2>
+        <h2 className="text-3xl font-bold mb-6 text-green-800 text-center"> 
+            <Typewriter
+                words={[
+               '  Benefits of Gardening ',
+                ]}
+                             
+               cursor
+                    loop={true}         
+                 cursorStyle="|"
+                 typeSpeed={80}
+                 deleteSpeed={50}
+                delaySpeed={1500}
+                            />
+          
+         </h2>
         <div className="space-y-8">
           {benefits.map((item, index) => (
             <div

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Typewriter } from 'react-simple-typewriter';
 
 const gardenGuides = [
   {
@@ -42,7 +43,20 @@ const gardenGuides = [
 const GardenIdeas = () => {
   return (
     <section className="px-4 py-10 md:px-10 lg:px-20">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">🌿 Garden Inspiration: 6 Great Course</h2>
+      <h2 className="text-3xl font-bold text-green-800 text-center mb-10">
+         <Typewriter
+         words={[
+        ' Garden Inspiration: 6 Great Course ',
+          ]}
+                           
+             cursor
+                  loop={true}         
+               cursorStyle="|"
+               typeSpeed={80}
+               deleteSpeed={50}
+              delaySpeed={1500}
+                          />
+         </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {gardenGuides.map((guide, index) => (
           <div

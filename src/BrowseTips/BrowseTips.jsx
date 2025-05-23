@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router';
 import TipCard from '../ExploreGardeners/TipCard';
 import Loading from '../Loading/Loading';
 import { Fade } from 'react-awesome-reveal';
+import { Typewriter } from 'react-simple-typewriter';
 
 const BrowseTips = () => {
   const gardenData = useLoaderData();
@@ -33,8 +34,21 @@ const BrowseTips = () => {
     <div className="max-w-7xl mx-auto p-4">
       <Fade direction="down" triggerOnce>
         <h2 className="text-2xl font-bold text-center mb-6 text-green-700">
-          Explore Garden Tips from Gardeners
-        </h2>
+      <Typewriter
+      words={[
+      'Explore Garden Tips 🌿',
+      'Learn from Real Gardeners 👩‍🌾',
+        'Grow Your Green World 🌱',
+     ]}
+     loop={true}
+     cursor
+     cursorStyle="|"
+     typeSpeed={70}
+     deleteSpeed={50}
+     delaySpeed={1500}
+  />
+</h2>
+
       </Fade>
 
       <Fade direction="up" delay={100} triggerOnce>
