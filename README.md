@@ -1,3 +1,5 @@
+# PROJECT NAME : GARDEN HUB
+
 # 🌿 Garden Hub - Gardening Community & Resource Platform
 
 **Live Site URL:** [https://my-garden-website.web.app/]
