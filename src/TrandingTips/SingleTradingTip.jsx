@@ -37,10 +37,10 @@ const SingleTradingTip = ({ trandingSingleTip }) => {
         return res.json();
       })
       .then(data => {
-        console.log('Like updated successfully:', data);
+      
       })
       .catch(err => {
-        console.error('Like update failed:', err);
+       
       });
   };
 

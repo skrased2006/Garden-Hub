@@ -61,13 +61,6 @@ export const router = createBrowserRouter([
         },
         {
           path: '/updateMySingleTip/:id',
-//         loader: async ({ params }) => {
-//   console.log('Fetching tip with ID:', params.id);
-//   const res = await fetch(`http://localhost:3000/tips/${params.id}`);
-//   const data = await res.json();
-//   console.log('Fetched data:', data);
-//   return data;
-// },
       loader:({params})=>fetch(`https://garden-hub-server-teal.vercel.app/tips/${params.id}`),
 
           Component: UpdateMysingleTip
