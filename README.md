@@ -40,3 +40,28 @@ Garden Hub is an interactive community and resource platform for gardening enthu
 ---
 
 Enjoy building a greener world with Garden Hub! 🌿
+
+## 🔧 How to Run Locally
+
+### Clone the repo and install dependencies
+
+```bash
+# Clone client repo
+git clone https://github.com/Programming-Hero-Web-Course4/b11a10-server-side-skrased2006
+cd your-client-repo
+npm install
+npm start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
